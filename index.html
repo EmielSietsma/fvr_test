@@ -21,7 +21,7 @@
         .value[data-unit]::after { content: attr(data-unit); }
         .keurmerken { display: flex; gap: 20px; align-items: flex-start; padding: 4px 0; }
         .keurmerk { display: flex; flex-direction: column; align-items: center; gap: 4px; }
-        .keurmerk img { height: 56px; width: auto; }
+        .keurmerk img { height: 78px; width: auto; }
         .keurmerk-nummer { font-size: 10px; color: #555; text-align: center; }
         .footer { background: #f5f5f5; padding: 8px 12px; font-size: 10px; color: #999; text-align: center; border-radius: 0 0 6px 6px; }
     </style>
@@ -117,7 +117,7 @@
         document.querySelectorAll('.value[id]').forEach(el => {
             el.textContent = params.get(el.id) ?? '-';
         });
-        document.title = `Element ${params.get('pakket') ?? ''}`;
+        document.title = `Element ${params.get('merk') ?? ''}`;
 
         const komo = params.get('komo');
         if (komo && komo.trim() !== '' && komo !== 'nee') {
