@@ -23,6 +23,8 @@
         .keurmerk { display: flex; flex-direction: column; align-items: center; gap: 4px; }
         .keurmerk img { height: 78px; width: auto; }
         .keurmerk-nummer { font-size: 10px; color: #555; text-align: center; }
+        .komo-link { display: inline-block; margin-top: 6px; padding: 5px 10px; background: rgb(201, 80, 39); color: #fff; text-decoration: none; font-size: 10px; border-radius: 4px; text-align: center; transition: background .15s; }
+        .komo-link:hover { background: rgb(225, 113, 75); }
         .footer { background: #f5f5f5; padding: 8px 12px; font-size: 10px; color: #999; text-align: center; border-radius: 0 0 6px 6px; }
     </style>
 </head>
@@ -80,6 +82,7 @@
                     <div id="komo-badge" class="keurmerk" style="display:none">
                         <img src="komo.png" alt="KOMO">
                         <div id="komo-nummer" class="keurmerk-nummer"></div>
+                        <a id="komo-link" class="komo-link" href="#" target="_blank">Bekijk KOMO-certificaat</a>
                     </div>
                     <div id="fsc-badge" class="keurmerk" style="display:none">
                         <img src="fsc.jpeg" alt="FSC">
@@ -123,6 +126,7 @@
         if (komo && komo.trim() !== '' && komo !== 'nee') {
             document.getElementById('komo-badge').style.display = '';
             document.getElementById('komo-nummer').textContent = `productcertificaatnr. ${komo}`;
+            document.getElementById('komo-link').href = `https://www.komo.nl/certificaten/${komo}/`;
         }
 
         const houtkeur = (params.get('houtkeur') ?? '').trim().toUpperCase();
