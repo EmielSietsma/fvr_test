@@ -26,6 +26,9 @@
         .komo-link { display: inline-block; margin-top: 6px; padding: 5px 10px; background: rgb(201, 80, 39); color: #fff; text-decoration: none; font-size: 10px; border-radius: 4px; text-align: center; transition: background .15s; }
         .komo-link:hover { background: rgb(225, 113, 75); }
         .footer { background: #f5f5f5; padding: 8px 12px; font-size: 10px; color: #999; text-align: center; border-radius: 0 0 6px 6px; }
+        .footnotes { padding: 8px 14px 4px 14px; font-size: 9px; color: #999; border-top: 1px solid #e0e0e0; }
+        .footnotes p { margin: 2px 0; }
+        sup { font-size: 7px; vertical-align: super; }
     </style>
 </head>
 <body>
@@ -83,7 +86,7 @@
                  ===================================================== -->
             <div class="section">
                 <h3>Specificaties</h3>
-                <div class="row"><span class="label">Rc-waarde:</span>   <span class="value" id="rc" data-unit=" m²K/W"></span></div>
+                <div class="row"><span class="label">Rc-waarde<sup>*</sup>:</span>   <span class="value" id="rc" data-unit=" m²K/W"></span></div>
                 <div class="row"><span class="label">Brandwerendheid:</span> <span class="value" id="brand" data-unit="min"></span></div>
 
             </div>
@@ -121,6 +124,8 @@
         <!-- ========================================================
              VOETTEKST — pas aan of verwijder naar wens
              ======================================================== -->
+            <p><sup>*</sup>Rc-waarde die voorzien zijn van een ≥-teken zijn gebaseerd op een gewogen gemiddelde van een x-aantal maatgevende elementen voor een project. Wanneer er een exacte waarde staat, voorzien van een =-teken, betreft het de Rc-waarde van dit specifieke element.</p>
+
         <div class="footer">Timmerfabriek Frank van Roij</div>
 
     </div>
